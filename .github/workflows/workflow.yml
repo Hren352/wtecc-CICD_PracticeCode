@@ -1,0 +1,15 @@
+name: CI workflow
+
+on:
+  push:
+    branches: [ "main" ] #Run the workflow on every push to the main branch
+  pull_request:
+    branches: [ "main" ] #Run the workflow whenever a pull request is created to the main branch.
+
+jobs: #First you need a job
+  build: #need to name the job
+    runs-on: ubuntu-latest #runner for this job
+    container: python:3.9-slim #This project was developed on Python 3.9, so you need to ensure that the CI pipeline also runs on the same version of Python
+
+
+
